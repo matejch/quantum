@@ -11,9 +11,9 @@
 <HEAD>
 
   <TITLE>
-    Kvantna mehanika 1 - domaÄa naloga
+    Kvantna mehanika 1 - domaèa naloga
   </TITLE>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
 
 </HEAD>
@@ -23,12 +23,12 @@
 
   <P>
     <FONT SIZE="4">
-      <H1>ÄŒasovni razvoj valovne funkcije</H1>
+      <H1>Èasovni razvoj valovne funkcije</H1>
       <i>MATEJ LEBAN</i>, 30. marec 2000
 
       <br><br><br>
 
-      Elektron je ob t = 0 v neskonÄni potencialni jami Å¡irine 2a (med -a in a) z valovno funkcijo:
+      Elektron je ob t = 0 v neskonèni potencialni jami širine 2a (med -a in a) z valovno funkcijo:
     </FONT>
   </P>
   <P>
@@ -47,9 +47,9 @@
   </P>
   <P>
     <FONT SIZE="4">
-      <B>a)</B> IzraÄunaj valovno funkcijo elektrona ob poznejÅ¡ih Äasih.<br><B>b)</B> Kako se s Äasom spreminja
-      verjetnost, da je elektron na desni polovici potencialne jame (x &gt; 0) ?<br><B>c)</B> PokaÅ¾i, da velja
-      Ehrenfestov teorem za povpreÃ¨no vrednost gibalne kolicine. <br><B>d)</B> Izdelaj simulacijo Äasovne odvisnosti
+      <B>a)</B> Izraèunaj valovno funkcijo elektrona ob poznejših èasih.<br><B>b)</B> Kako se s èasom spreminja
+      verjetnost, da je elektron na desni polovici potencialne jame (x &gt; 0) ?<br><B>c)</B> Pokai, da velja
+      Ehrenfestov teorem za povpreèno vrednost gibalne kolicine. <br><B>d)</B> Izdelaj simulacijo èasovne odvisnosti
       verjetnostne gostote.
     </FONT>
   </P>
@@ -67,7 +67,7 @@
 
     <hr size=2>
     <FONT SIZE="5"><b>
-        a) Äasovni razvoj</b></FONT>
+        a) èasovni razvoj</b></FONT>
   </P>
   <P>
     <FONT SIZE="4">
@@ -81,8 +81,8 @@
   <P>
     <FONT SIZE="4">
       kjer so <IMG SRC="Images/index_gr_4.gif" BORDER="0" ALT="[Graphics:Images/index_gr_4.gif]" WIDTH="17" HEIGHT="17"
-        ALIGN="absmiddle"> lastne funkcije za delec v neskonÄni potencialni jami. Nastavek postavim v Schroedingerjevo
-      enaÄbo :&nbsp;&nbsp;<IMG SRC="Images/index_gr_5.gif" BORDER="0" ALT="[Graphics:Images/index_gr_5.gif]" WIDTH="67"
+        ALIGN="absmiddle"> lastne funkcije za delec v neskonèni potencialni jami. Nastavek postavim v Schroedingerjevo
+      enaèbo :&nbsp;&nbsp;<IMG SRC="Images/index_gr_5.gif" BORDER="0" ALT="[Graphics:Images/index_gr_5.gif]" WIDTH="67"
         HEIGHT="32" ALIGN="absmiddle"> in dobim</FONT>
   </P>
   <P>
@@ -125,7 +125,7 @@
   </P>
   <P>
     <FONT SIZE="4">
-      Razvita po Äasu pa zgleda takole:</FONT>
+      Razvita po èasu pa zgleda takole:</FONT>
   </P>
   <P>
     <FONT SIZE="4">
@@ -173,7 +173,7 @@
   </P>
   <P>
     <FONT SIZE="4">
-      ANIMACIJA: Verjetnostna gostota je simetriÄna tako v x kakor v t. Verjetnost, da na delec naletimo v desni
+      ANIMACIJA: Verjetnostna gostota je simetrièna tako v x kakor v t. Verjetnost, da na delec naletimo v desni
       polovici jame, niha okoli vrednosti 0.5.<br><br>
       <img src="Images/_box.gif">
   </P>
@@ -198,8 +198,8 @@
   <P>
     <FONT SIZE="4">
       1)&nbsp;&nbsp;<FONT FACE="Times New Roman CE">
-        <FONT SIZE="4"><IMG SRC="Images/index_gr_17.gif" BORDER="0" ALT="[Graphics:Images/index_gr_17.gif]" WIDTH="108"
-            HEIGHT="21" ALIGN="absmiddle"></FONT>
+        <FONT SIZE="4"><IMG SRC="Images/" BORDER="0" ALT="[Graphics:Images/index_gr_17.gif]" WIDTH="108" HEIGHT="21"
+            ALIGN="absmiddle"></FONT>
       </FONT>
     </FONT>
   </P>
@@ -234,7 +234,7 @@
   </P>
   <P>
     <FONT SIZE="4">
-      ÄŒe &lt;x&gt; odvajam in mnoÅ¾im z maso m, vidim, da teorem velja.</FONT>
+      Ce &lt;x&gt; odvajam in mnoim z maso m, vidim da teorem velja.</FONT>
   </P>
   <P>
     <FONT SIZE="4">
