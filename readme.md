@@ -1,4 +1,4 @@
 # quantum mechanics
 
 
-[Read here](https://matejch.github.com/quantum)
+[Read here](https://matejch.github.io/quantum)
