@@ -1,275 +1,176 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-
-
-<!-- This HTML document was created by converting a Mathematica notebook using HTMLSave. -->
-
-
-
-<HTML>
-
-
-<HEAD>
-
-  <TITLE>
-    Kvantna mehanika 1 - Časovni razvoj valovne funkcije
-  </TITLE>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kvantna mehanika 1 - Časovni razvoj valovne funkcije</title>
   <meta property="og:image" content="https://matejch.github.io/quantum/Images/blured.gif">
-
   <meta property="og:title" content="Kvantna mehanika 1 - Časovni razvoj valovne funkcije">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://matejch.github.io/quantum/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Časovni razvoj valovne funkcije</h1>
+      <p class="author"><em>Matej Leban</em>, 30. marec 2000</p>
+    </header>
 
-</HEAD>
+    <p>Elektron je ob t = 0 v neskončni potencialni jami širine 2a (med -a in a) z valovno funkcijo:</p>
 
+    <table style="width:100%">
+      <tr>
+        <td style="text-align:center; vertical-align:middle">
+          <div class="equation">
+            $$\psi(x,0) = A\!\left(\cos\frac{\pi x}{2a} + \frac{1}{2}\,\sin\frac{2\pi x}{2a}\right)$$
+          </div>
+        </td>
+        <td style="text-align:center">
+          <img src="Images/psi_initial.svg" alt="Graf valovne funkcije psi(x,0)" style="max-width:100%">
+        </td>
+      </tr>
+    </table>
 
-<BODY BGCOLOR="#FFFFFF">
+    <p><b>a)</b> Izračunaj valovno funkcijo elektrona ob poznejših časih.<br>
+    <b>b)</b> Kako se s časom spreminja verjetnost, da je elektron na desni polovici potencialne jame ($x > 0$)?<br>
+    <b>c)</b> Pokaži, da velja Ehrenfestov teorem za povprečno vrednost gibalne količine.<br>
+    <b>d)</b> Izdelaj simulacijo časovne odvisnosti verjetnostne gostote.</p>
 
-  <P>
-    <FONT SIZE="4">
-      <H1>Časovni razvoj valovne funkcije</H1>
-      <i>MATEJ LEBAN</i>, 30. marec 2000
+    <p>Funkcijo najprej normiram:</p>
 
-      <br><br><br>
+    <div class="equation">
+      $$\int_{-\infty}^{\infty} \psi^*\,\psi\;dx = 1 \implies A = \frac{2}{\sqrt{5}}$$
+    </div>
 
-      Elektron je ob t = 0 v neskončni potencialni jami širine 2a (med -a in a) z valovno funkcijo:
-    </FONT>
-  </P>
-  <P>
+    <section id="casovni-razvoj">
+      <h2>a) Časovni razvoj</h2>
 
-  <table width=100% border=0 cellpadding=15>
-    <td valign=middle align=center>
-      <IMG SRC="Images/index_gr_1.gif" BORDER="0" ALT="[Graphics:Images/index_gr_1.gif]" WIDTH="208" HEIGHT="32">
-    </td>
-    <td align=center>
-      <img src="Images/blured.gif">
-    </td>
-  </table>
+      <p>Nastavek:</p>
 
-  <br>
+      <div class="equation">
+        $$\psi(x,\,t) = \sum_{n=0}^{\infty} C_n(t)\;\psi_n(x)$$
+      </div>
 
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <B>a)</B> Izračunaj valovno funkcijo elektrona ob poznejših časih.<br><B>b)</B> Kako se s časom spreminja
-      verjetnost, da je elektron na desni polovici potencialne jame (x &gt; 0) ?<br><B>c)</B> Pokaži, da velja
-      Ehrenfestov teorem za povprečno vrednost gibalne količine. <br><B>d)</B> Izdelaj simulacijo časovne odvisnosti
-      verjetnostne gostote.
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Funkcijo najprej normiram:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_2.gif" BORDER="0" ALT="[Graphics:Images/index_gr_2.gif]" WIDTH="162" HEIGHT="35"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
+      <p>kjer so $\psi_n$ lastne funkcije za delec v neskončni potencialni jami. Nastavek postavim v Schr&ouml;dingerjevo enačbo: $\;H\psi = i\hbar\,\dfrac{d\psi}{dt}\;$ in dobim</p>
 
-    <hr size=2>
-    <FONT SIZE="5"><b>
-        a) časovni razvoj</b></FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Nastavek:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4"><IMG SRC="Images/index_gr_3.gif" BORDER="0" ALT="[Graphics:Images/index_gr_3.gif]" hspace="12"
-        WIDTH="167" HEIGHT="21" ALIGN="absmiddle">
-  </P>
-  </FONT>
-  <P>
-    <FONT SIZE="4">
-      kjer so <IMG SRC="Images/index_gr_4.gif" BORDER="0" ALT="[Graphics:Images/index_gr_4.gif]" WIDTH="17" HEIGHT="17"
-        ALIGN="absmiddle"> lastne funkcije za delec v neskončni potencialni jami. Nastavek postavim v Schroedingerjevo
-      enačbo :&nbsp;&nbsp;<IMG SRC="Images/index_gr_5.gif" BORDER="0" ALT="[Graphics:Images/index_gr_5.gif]" WIDTH="67"
-        HEIGHT="32" ALIGN="absmiddle"> in dobim</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_6.gif" BORDER="0" ALT="[Graphics:Images/index_gr_6.gif]" WIDTH="105" HEIGHT="18"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_7.gif" BORDER="0" ALT="[Graphics:Images/index_gr_7.gif]" WIDTH="53" HEIGHT="32"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_8.gif" BORDER="0" ALT="[Graphics:Images/index_gr_8.gif]" WIDTH="106" HEIGHT="37"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Za lastne funkcije dobim:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_9.gif" BORDER="0" ALT="[Graphics:Images/index_gr_9.gif]" WIDTH="269" HEIGHT="36"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Dana funkcije je linerarna kombinacija lastnih funkcij:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_10.gif" BORDER="0" ALT="[Graphics:Images/index_gr_10.gif]" WIDTH="149" HEIGHT="36"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Razvita po času pa zgleda takole:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <B><IMG SRC="Images/index_gr_11.gif" BORDER="0" ALT="[Graphics:Images/index_gr_11.gif]" WIDTH="225" HEIGHT="35"
-          ALIGN="absmiddle"></B>
-    </FONT>
-  </P>
-  <P>
+      <div class="equation">
+        $$C_n(t) = C_n(0)\;e^{-i\omega_n t}$$
+      </div>
 
-    <hr size=2>
-    <FONT SIZE="5"><b>
-        b) verjetnost, da je elektron v desni polovici potencialne jame</b></FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Verjetnost je enaka:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_12.gif" BORDER="0" ALT="[Graphics:Images/index_gr_12.gif]" WIDTH="65" HEIGHT="30"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Uvedem novo spremenljivko <IMG SRC="Images/index_gr_13.gif" BORDER="0" ALT="[Graphics:Images/index_gr_13.gif]"
-        WIDTH="201" HEIGHT="32" ALIGN="absmiddle"></FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_14.gif" BORDER="0" ALT="[Graphics:Images/index_gr_14.gif]" WIDTH="356" HEIGHT="144"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Verjetnostna gotota:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <FONT COLOR="#FF0000">
-        <IMG SRC="Images/index_gr_15.gif" BORDER="0" ALT="[Graphics:Images/index_gr_15.gif]" ALIGN="absmiddle">
-      </FONT>
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      ANIMACIJA: Verjetnostna gostota je simetrična tako v x kakor v t. Verjetnost, da na delec naletimo v desni
-      polovici jame, niha okoli vrednosti 0.5.<br><br>
-      <img src="Images/box.gif">
-  </P>
-  </FONT>
-  <P>
-    <FONT SIZE="4">
-      Verjetnost, da je elektron v desni strani potencialne jame:</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <FONT FACE="Times New Roman CE">
-        <FONT SIZE="4"><B><IMG SRC="Images/index_gr_16.gif" BORDER="0" ALT="[Graphics:Images/index_gr_16.gif]"
-              WIDTH="323" HEIGHT="44" ALIGN="absmiddle"></B></FONT>
-      </FONT>
-    </FONT>
-  </P>
-  <P>
-    <hr size=2>
-    <FONT SIZE="5"><b>
-        c) Ehrenfestov teorem</b></FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      1)&nbsp;&nbsp;<FONT FACE="Times New Roman CE">
-        <FONT SIZE="4"><IMG SRC="Images/index_gr_17.gif" BORDER="0" ALT="[Graphics:Images/index_gr_17.gif]" WIDTH="108"
-            HEIGHT="21" ALIGN="absmiddle"></FONT>
-      </FONT>
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      2) <FONT FACE="Times New Roman CE">
-        <FONT SIZE="4"><IMG SRC="Images/index_gr_18.gif" BORDER="0" ALT="[Graphics:Images/index_gr_18.gif]" WIDTH="126"
-            HEIGHT="37" ALIGN="absmiddle"></FONT>
-      </FONT>
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Pokazati moram da za to valovno funkcijo velja Ehrenfestov teorem</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      1)</FONT>
-    <hr size=1 width=50% align=left>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_19.gif" BORDER="0" ALT="[Graphics:Images/index_gr_19.gif]" WIDTH="223" HEIGHT="32"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_20.gif" BORDER="0" ALT="[Graphics:Images/index_gr_20.gif]" WIDTH="239" HEIGHT="32"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      Če &lt;x&gt; odvajam in množim z maso m, vidim, da teorem velja.</FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      2)</FONT>
-    <hr size=1 width=50% align=left>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_21.gif" BORDER="0" ALT="[Graphics:Images/index_gr_21.gif]" WIDTH="227" HEIGHT="38"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_22.gif" BORDER="0" ALT="[Graphics:Images/index_gr_22.gif]" WIDTH="248" HEIGHT="38"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_23.gif" BORDER="0" ALT="[Graphics:Images/index_gr_23.gif]" WIDTH="322" HEIGHT="35"
-        ALIGN="absmiddle"><br><IMG SRC="Images/index_gr_24.gif" BORDER="0" ALT="[Graphics:Images/index_gr_24.gif]"
-        WIDTH="110" HEIGHT="35" ALIGN="absmiddle">
-    </FONT>
-  </P>
-  <P>
-    <FONT SIZE="4">
-      <IMG SRC="Images/index_gr_25.gif" BORDER="0" ALT="[Graphics:Images/index_gr_25.gif]" WIDTH="289" HEIGHT="35"
-        ALIGN="absmiddle">
-    </FONT>
-  </P>
+      <div class="equation">
+        $$\omega_n = \frac{E_n}{\hbar}$$
+      </div>
 
+      <div class="equation">
+        $$E_n = \frac{\hbar^2\,\pi^2}{2m\,(2a)^2}\;n^2$$
+      </div>
 
+      <p>Za lastne funkcije dobim:</p>
+
+      <div class="equation">
+        $$\psi_1(x) = \frac{1}{\sqrt{a}}\cos\frac{\pi x}{2a} \quad\text{in}\quad \psi_2(x) = \frac{1}{\sqrt{a}}\sin\frac{2\pi x}{2a}$$
+      </div>
+
+      <p>Dana funkcija je linearna kombinacija lastnih funkcij:</p>
+
+      <div class="equation">
+        $$\psi(x,0) = \frac{2}{\sqrt{5}}\!\left(\psi_1 + \frac{1}{2}\,\psi_2\right)$$
+      </div>
+
+      <p>Razvita po času pa zgleda takole:</p>
+
+      <div class="equation key-result">
+        $$\psi(x,t) = \frac{2}{\sqrt{5}}\!\left(\psi_1\;e^{-i\omega_1 t} + \frac{1}{2}\,\psi_2\;e^{-i\omega_2 t}\right)$$
+      </div>
+    </section>
+
+    <section id="verjetnost">
+      <h2>b) Verjetnost, da je elektron v desni polovici potencialne jame</h2>
+
+      <p>Verjetnost je enaka:</p>
+
+      <div class="equation">
+        $$\int_0^{\infty} \psi^*\,\psi\;dx$$
+      </div>
+
+      <p>Uvedem novo spremenljivko $\;u = \dfrac{\pi x}{2a}\,,\quad du = \dfrac{\pi\,dx}{2a}\,,\quad \Delta\omega = \omega_2 - \omega_1$</p>
+
+      <div class="equation">
+        $$\int_0^{a} \frac{4}{5a}\!\left(\cos(u)\,e^{-i\omega_1 t} + \tfrac{1}{2}\sin(2u)\,e^{-i\omega_2 t}\right)\!\left(\cos(u)\,e^{i\omega_1 t} + \tfrac{1}{2}\sin(2u)\,e^{i\omega_2 t}\right)du =$$
+      </div>
+      <div class="equation">
+        $$= \frac{8}{5\pi}\!\int_0^{\pi/2}\!\left(\cos^2(u) + \tfrac{1}{4}\sin^2(2u) + \tfrac{1}{2}\cos(u)\sin(2u)\bigl(e^{i\Delta\omega t} + e^{-i\Delta\omega t}\bigr)\right)du = \frac{1}{2} + \frac{16}{15\pi}\cos(\Delta\omega\,t)$$
+      </div>
+
+      <p>Verjetnostna gostota:</p>
+
+      <div class="equation highlight">
+        $$\rho(x,\,t) = \left(\cos^2\!(x) + \frac{1}{4}\sin^2\!(2x) + \frac{1}{2}\cos(x)\sin(2x)\bigl(e^{i\Delta\omega t} + e^{-i\Delta\omega t}\bigr)\right)$$
+      </div>
+
+      <p>ANIMACIJA: Verjetnostna gostota je simetrična tako v $x$ kakor v $t$. Verjetnost, da na delec naletimo v desni polovici jame, niha okoli vrednosti 0.5.</p>
+
+      <figure>
+        <img src="Images/box.gif" alt="Animacija verjetnostne gostote v potencialni jami" loading="lazy">
+      </figure>
+
+      <p>Verjetnost, da je elektron v desni strani potencialne jame:</p>
+
+      <div class="equation highlight key-result">
+        $$P(0,\,a) = \int_0^{\infty} \psi^*\,\psi\;dx = \frac{1}{2} + \frac{16}{15\,\pi}\cos(\Delta\omega\,t)$$
+      </div>
+    </section>
+
+    <section id="ehrenfest">
+      <h2>c) Ehrenfestov teorem</h2>
+
+      <p>1)&ensp;$m\,\langle\dot{x}\rangle = \langle p \rangle$</p>
+
+      <p>2)&ensp;$\langle\dot{p}\rangle = -\!\left\langle\dfrac{\partial V}{\partial x}\right\rangle$</p>
+
+      <p>Pokazati moram, da za to valovno funkcijo velja Ehrenfestov teorem.</p>
+
+      <p>1)</p>
+
+      <div class="equation">
+        $$\langle x \rangle = \int_{-a}^{a} \psi^*\,x\,\psi\;dx = \frac{128\,a}{45\,\pi^2}\cos(\Delta\omega\,t)$$
+      </div>
+
+      <div class="equation">
+        $$\langle p \rangle = \int_{-a}^{a} \psi^*\,\frac{\hbar}{i}\,\frac{\partial}{\partial x}\,\psi\;dx = -\frac{16\,\hbar}{15\,a}\sin(\Delta\omega\,t)$$
+      </div>
+
+      <p>Če $\langle x \rangle$ odvajam in množim z maso $m$, vidim, da teorem velja.</p>
+
+      <p>2)</p>
+
+      <div class="equation">
+        $$|\psi(\pm a,\,t)|^2 = \frac{\pi^2}{5\,k_0^2\,a^3}\left|e^{-i\omega_1 t} \pm e^{-i\omega_2 t}\right|^2$$
+      </div>
+
+      <div class="equation">
+        $$|\psi(a,\,t)|^2 - |\psi(-a,\,t)|^2 = \frac{4\,\pi^2}{5\,k_0^2\,a^3}\cos(\Delta\omega\,t)$$
+      </div>
+
+      <div class="equation">
+        $$\left\langle -\frac{\partial V}{\partial x}\right\rangle = \lim_{V_0 \to \infty}\!\left(V_0\!\int \psi^*(x)\bigl(\delta(x+a) - \delta(x-a)\bigr)\psi(x)\,dx\right) =$$
+      </div>
+
+      <div class="equation">
+        $$= -\frac{2\,\pi^2\,\hbar^2}{5\,m\,a^3}\cos(\Delta\omega\,t)$$
+      </div>
+
+      <div class="equation">
+        $$\langle\dot{p}\rangle = -\frac{16\,\hbar}{15\,a}\,\Delta\omega\cos(\Delta\omega\,t) = -\frac{2\,\pi^2\,\hbar^2}{5\,m\,a^3}\cos(\Delta\omega\,t)$$
+      </div>
+    </section>
+  </article>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});">
+  </script>
 </body>
-
 </html>
