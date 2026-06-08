@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quantum Mechanics 1 - Time Evolution of the Wave Function</title>
+  <title>Kvantna mehanika 1 - Časovni razvoj valovne funkcije</title>
   <meta property="og:image" content="https://matejch.github.io/quantum/Images/blured.gif">
-  <meta property="og:title" content="Quantum Mechanics 1 - Time Evolution of the Wave Function">
+  <meta property="og:title" content="Kvantna mehanika 1 - Časovni razvoj valovne funkcije">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://matejch.github.io/quantum/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
@@ -14,11 +14,11 @@
 <body>
   <article>
     <header>
-      <h1>Time Evolution of the Wave Function</h1>
-      <p class="author"><em>Matej Leban</em>, 30 March 2000 &mdash; <a href="slo.html">Original (Slovene)</a></p>
+      <h1>Časovni razvoj valovne funkcije</h1>
+      <p class="author"><em>Matej Leban</em>, 30. marec 2000</p>
     </header>
 
-    <p>At $t = 0$, an electron is in an infinite potential well of width $2a$ (between $-a$ and $a$) with the wave function:</p>
+    <p>Elektron je ob t = 0 v neskončni potencialni jami širine 2a (med -a in a) z valovno funkcijo:</p>
 
     <table style="width:100%">
       <tr>
@@ -28,32 +28,32 @@
           </div>
         </td>
         <td style="text-align:center">
-          <img src="Images/psi_initial.svg" alt="Plot of wave function psi(x,0)" style="max-width:100%">
+          <img src="Images/psi_initial.svg" alt="Graf valovne funkcije psi(x,0)" style="max-width:100%">
         </td>
       </tr>
     </table>
 
-    <p><b>a)</b> Calculate the wave function of the electron at later times.<br>
-    <b>b)</b> How does the probability of finding the electron in the right half of the potential well ($x > 0$) change with time?<br>
-    <b>c)</b> Show that Ehrenfest's theorem holds for the expectation value of momentum.<br>
-    <b>d)</b> Create a simulation of the time dependence of the probability density.</p>
+    <p><b>a)</b> Izračunaj valovno funkcijo elektrona ob poznejših časih.<br>
+    <b>b)</b> Kako se s časom spreminja verjetnost, da je elektron na desni polovici potencialne jame ($x > 0$)?<br>
+    <b>c)</b> Pokaži, da velja Ehrenfestov teorem za povprečno vrednost gibalne količine.<br>
+    <b>d)</b> Izdelaj simulacijo časovne odvisnosti verjetnostne gostote.</p>
 
-    <p>First, I normalize the function:</p>
+    <p>Funkcijo najprej normiram:</p>
 
     <div class="equation">
       $$\int_{-\infty}^{\infty} \psi^*\,\psi\;dx = 1 \implies A = \frac{2}{\sqrt{5}}$$
     </div>
 
-    <section id="time-evolution">
-      <h2>a) Time evolution</h2>
+    <section id="casovni-razvoj">
+      <h2>a) Časovni razvoj</h2>
 
-      <p>Ansatz:</p>
+      <p>Nastavek:</p>
 
       <div class="equation">
         $$\psi(x,\,t) = \sum_{n=0}^{\infty} C_n(t)\;\psi_n(x)$$
       </div>
 
-      <p>where $\psi_n$ are the eigenfunctions for a particle in an infinite potential well. Substituting the ansatz into the Schr&ouml;dinger equation: $\;H\psi = i\hbar\,\dfrac{d\psi}{dt}\;$ gives</p>
+      <p>kjer so $\psi_n$ lastne funkcije za delec v neskončni potencialni jami. Nastavek postavim v Schr&ouml;dingerjevo enačbo: $\;H\psi = i\hbar\,\dfrac{d\psi}{dt}\;$ in dobim</p>
 
       <div class="equation">
         $$C_n(t) = C_n(0)\;e^{-i\omega_n t}$$
@@ -67,35 +67,35 @@
         $$E_n = \frac{\hbar^2\,\pi^2}{2m\,(2a)^2}\;n^2$$
       </div>
 
-      <p>The eigenfunctions are:</p>
+      <p>Za lastne funkcije dobim:</p>
 
       <div class="equation">
-        $$\psi_1(x) = \frac{1}{\sqrt{a}}\cos\frac{\pi x}{2a} \quad\text{and}\quad \psi_2(x) = \frac{1}{\sqrt{a}}\sin\frac{2\pi x}{2a}$$
+        $$\psi_1(x) = \frac{1}{\sqrt{a}}\cos\frac{\pi x}{2a} \quad\text{in}\quad \psi_2(x) = \frac{1}{\sqrt{a}}\sin\frac{2\pi x}{2a}$$
       </div>
 
-      <p>The given function is a linear combination of eigenfunctions:</p>
+      <p>Dana funkcija je linearna kombinacija lastnih funkcij:</p>
 
       <div class="equation">
         $$\psi(x,0) = \frac{2}{\sqrt{5}}\!\left(\psi_1 + \frac{1}{2}\,\psi_2\right)$$
       </div>
 
-      <p>Its time evolution is:</p>
+      <p>Razvita po času pa zgleda takole:</p>
 
       <div class="equation key-result">
         $$\psi(x,t) = \frac{2}{\sqrt{5}}\!\left(\psi_1\;e^{-i\omega_1 t} + \frac{1}{2}\,\psi_2\;e^{-i\omega_2 t}\right)$$
       </div>
     </section>
 
-    <section id="probability">
-      <h2>b) Probability of finding the electron in the right half of the potential well</h2>
+    <section id="verjetnost">
+      <h2>b) Verjetnost, da je elektron v desni polovici potencialne jame</h2>
 
-      <p>The probability equals:</p>
+      <p>Verjetnost je enaka:</p>
 
       <div class="equation">
         $$\int_0^{\infty} \psi^*\,\psi\;dx$$
       </div>
 
-      <p>Introducing a new variable $\;u = \dfrac{\pi x}{2a}\,,\quad du = \dfrac{\pi\,dx}{2a}\,,\quad \Delta\omega = \omega_2 - \omega_1$</p>
+      <p>Uvedem novo spremenljivko $\;u = \dfrac{\pi x}{2a}\,,\quad du = \dfrac{\pi\,dx}{2a}\,,\quad \Delta\omega = \omega_2 - \omega_1$</p>
 
       <div class="equation">
         $$\int_0^{a} \frac{4}{5a}\!\left(\cos(u)\,e^{-i\omega_1 t} + \tfrac{1}{2}\sin(2u)\,e^{-i\omega_2 t}\right)\!\left(\cos(u)\,e^{i\omega_1 t} + \tfrac{1}{2}\sin(2u)\,e^{i\omega_2 t}\right)du =$$
@@ -104,19 +104,19 @@
         $$= \frac{8}{5\pi}\!\int_0^{\pi/2}\!\left(\cos^2(u) + \tfrac{1}{4}\sin^2(2u) + \tfrac{1}{2}\cos(u)\sin(2u)\bigl(e^{i\Delta\omega t} + e^{-i\Delta\omega t}\bigr)\right)du = \frac{1}{2} + \frac{16}{15\pi}\cos(\Delta\omega\,t)$$
       </div>
 
-      <p>Probability density:</p>
+      <p>Verjetnostna gostota:</p>
 
       <div class="equation highlight">
         $$\rho(x,\,t) = \left(\cos^2\!(x) + \frac{1}{4}\sin^2\!(2x) + \frac{1}{2}\cos(x)\sin(2x)\bigl(e^{i\Delta\omega t} + e^{-i\Delta\omega t}\bigr)\right)$$
       </div>
 
-      <p>ANIMATION: The probability density is symmetric in both $x$ and $t$. The probability of finding the particle in the right half of the well oscillates around the value 0.5.</p>
+      <p>ANIMACIJA: Verjetnostna gostota je simetrična tako v $x$ kakor v $t$. Verjetnost, da na delec naletimo v desni polovici jame, niha okoli vrednosti 0.5.</p>
 
       <figure>
-        <img src="Images/box.gif" alt="Animation of probability density in the potential well" loading="lazy">
+        <img src="Images/box.gif" alt="Animacija verjetnostne gostote v potencialni jami" loading="lazy">
       </figure>
 
-      <p>The probability of the electron being in the right half of the potential well:</p>
+      <p>Verjetnost, da je elektron v desni strani potencialne jame:</p>
 
       <div class="equation highlight key-result">
         $$P(0,\,a) = \int_0^{\infty} \psi^*\,\psi\;dx = \frac{1}{2} + \frac{16}{15\,\pi}\cos(\Delta\omega\,t)$$
@@ -124,13 +124,13 @@
     </section>
 
     <section id="ehrenfest">
-      <h2>c) Ehrenfest's theorem</h2>
+      <h2>c) Ehrenfestov teorem</h2>
 
       <p>1)&ensp;$m\,\langle\dot{x}\rangle = \langle p \rangle$</p>
 
       <p>2)&ensp;$\langle\dot{p}\rangle = -\!\left\langle\dfrac{\partial V}{\partial x}\right\rangle$</p>
 
-      <p>I need to show that Ehrenfest's theorem holds for this wave function.</p>
+      <p>Pokazati moram, da za to valovno funkcijo velja Ehrenfestov teorem.</p>
 
       <p>1)</p>
 
@@ -142,7 +142,7 @@
         $$\langle p \rangle = \int_{-a}^{a} \psi^*\,\frac{\hbar}{i}\,\frac{\partial}{\partial x}\,\psi\;dx = -\frac{16\,\hbar}{15\,a}\sin(\Delta\omega\,t)$$
       </div>
 
-      <p>Differentiating $\langle x \rangle$ and multiplying by mass $m$, I confirm the theorem holds.</p>
+      <p>Če $\langle x \rangle$ odvajam in množim z maso $m$, vidim, da teorem velja.</p>
 
       <p>2)</p>
 
